@@ -116,14 +116,14 @@ public class B_While {
 		// 1. do~while문 사용
 		// "1부터 x까지의 총 합계 : xx"
 		Scanner sc = new Scanner(System.in);
-		int num =  sc.nextInt();
-		System.out.print("1부터 "+num+"까지의 총 합계 : ");
+		int num = sc.nextInt();
+		System.out.print("1부터 " + num + "까지의 총 합계 : ");
 		int sum = 0;
 		do {
 			sum += num;
 			num--;
-			
-		}while(num>0);
+
+		} while (num > 0);
 		System.out.println(sum);
 	}
 }
