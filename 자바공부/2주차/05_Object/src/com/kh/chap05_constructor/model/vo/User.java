@@ -105,16 +105,4 @@ public class User {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
