@@ -31,6 +31,17 @@ public class ObjectArrayRun {
 			System.out.println(arr[i].information());
 		}
 		
+		
+		//사용자에게 검색할 도서 제목을 입력받아 각 전체 도서들의 제목과 일일이 비교하여 일치하는 도서의 가격을 알려주는 메서드
+		
+		System.out.print("검색할 도서 제목 : ");
+		String searchTitle = sc.nextLine();
+		for (int i = 0 ; i < arr.length; i++ ) {
+			if(arr[i].getTitle().equals(searchTitle)) {
+				System.out.print("가격 : ");
+				System.out.println(arr[i].getPrice()+"원");
+			}
+		}
 	}
 
 }
