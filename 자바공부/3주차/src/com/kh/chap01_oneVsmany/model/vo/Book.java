@@ -1,4 +1,4 @@
-package com.kh.chap01_enVsmany.model.vo;
+package com.kh.chap01_oneVsmany.model.vo;
 
 public class Book {
 	private String title;
