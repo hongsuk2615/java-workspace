@@ -22,7 +22,7 @@ public class StudentMenu {
 		
 		System.out.println("========== 성적 결과 출력 ==========");
 		for (int i = 0; i < ssm.printStudent().length; i++) {
-			if (ssm.printStudent()[i].getScore() < 60) {
+			if (ssm.printStudent()[i].getScore() < StudentController.CUT_LINE) {
 				System.out.println(ssm.printStudent()[i].getName() + "학생은 재시험 대상입니다.");
 			} else {
 				System.out.println(ssm.printStudent()[i].getName() + "학생은 통과 입니다.");
