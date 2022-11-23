@@ -49,6 +49,7 @@ public class ObjectArrayRun {
 				System.out.print("가격 : ");
 				System.out.println(arr[i].getPrice() + "원");
 				result = true;
+				break; // 책의 제목이 중복되지 않은 이상 break문을 걸어주게되면 찾고자하는 책을 찾고나서 더이상 반복문을 실행시키지 않음.
 			} 
 
 		}
