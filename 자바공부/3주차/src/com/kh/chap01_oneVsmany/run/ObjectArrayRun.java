@@ -5,14 +5,14 @@ import java.util.Scanner;
 import com.kh.chap01_oneVsmany.model.vo.Book;
 
 public class ObjectArrayRun {
-	
+
 	public static void main(String[] args) {
-		
+
 		Book[] arr = new Book[3];
-		
+
 		Scanner sc = new Scanner(System.in);
-		
-		for(int i = 0 ; i < 3 ; i++) {
+
+		for (int i = 0; i < 3; i++) {
 			System.out.print("제목 : ");
 			String title = sc.nextLine();
 			System.out.print("저자 : ");
@@ -22,25 +22,39 @@ public class ObjectArrayRun {
 			sc.nextLine();
 			System.out.print("출판사 : ");
 			String publisher = sc.nextLine();
-			
+
 			arr[i] = new Book(title, author, price, publisher);
-			
+
 		}
-		//전체도서를 출력
-		for(int i = 0 ; i<arr.length;i++) {
+		// 전체도서를 출력
+		for (int i = 0; i < arr.length; i++) {
 			System.out.println(arr[i].information());
 		}
-		
-		
-		//사용자에게 검색할 도서 제목을 입력받아 각 전체 도서들의 제목과 일일이 비교하여 일치하는 도서의 가격을 알려주는 메서드
-		
+
+		// 사용자에게 검색할 도서 제목을 입력받아 각 전체 도서들의 제목과 일일이 비교하여 일치하는 도서의 가격을 알려주는 메서드
+
 		System.out.print("검색할 도서 제목 : ");
 		String searchTitle = sc.nextLine();
-		for (int i = 0 ; i < arr.length; i++ ) {
-			if(arr[i].getTitle().equals(searchTitle)) {
+//		for (int i = 0 ; i < arr.length; i++ ) {
+//			if(arr[i].getTitle().equals(searchTitle)) {
+//				System.out.print("가격 : ");
+//				System.out.println(arr[i].getPrice()+"원");
+//			}
+//		}
+
+		// 만약 일치하는 도서를 찾지 못한경우 "검색된 도서가 없습니다" 출력
+		boolean result = false;
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i].getTitle().equals(searchTitle)) {
 				System.out.print("가격 : ");
-				System.out.println(arr[i].getPrice()+"원");
-			}
+				System.out.println(arr[i].getPrice() + "원");
+				result = true;
+			} 
+
+		}
+		
+		if (!result) {
+			System.out.println("검색된 도서가 없습니다.");
 		}
 	}
 
