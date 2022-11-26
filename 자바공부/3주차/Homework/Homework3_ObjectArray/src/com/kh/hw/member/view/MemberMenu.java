@@ -291,6 +291,7 @@ public class MemberMenu {
 		char agree = sc.nextLine().charAt(0);
 		if (agree == 'y' || agree == 'Y') {
 			mc.delete();
+			System.out.println("성공적으로 삭제하였습니다.");
 		}
 	}
 
