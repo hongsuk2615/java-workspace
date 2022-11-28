@@ -1,6 +1,6 @@
 package com.kh.chap02_abstrcatAndInterface.part02_family.model.vo;
 
-public class Mother extends Person {
+public class Mother extends Person implements Basic {
 
 	private String babyBirth;
 

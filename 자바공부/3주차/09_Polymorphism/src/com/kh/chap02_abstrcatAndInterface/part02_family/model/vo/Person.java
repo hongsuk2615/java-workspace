@@ -46,8 +46,8 @@ public abstract class Person {
 		return "Person [name=" + name + ", weight=" + weight + ", health=" + health + "]";
 	}
 	
-	public abstract void eat();
-	public abstract void sleep();
+//	public abstract void eat();
+//	public abstract void sleep();
 	
 	
 }
