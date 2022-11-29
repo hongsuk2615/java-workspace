@@ -19,11 +19,13 @@ public class TokenController {
 	
 	public String firstCap(String input) {
 		String result = "";
-		StringTokenizer stn = new StringTokenizer(input);
-		result += stn.nextToken().toUpperCase();
-		
-		while(stn.hasMoreTokens()) {
-			result += stn.nextToken();
+		char[] cArr = input.toCharArray();
+		for (int index = 0; index < cArr.length; index++) {
+			if(index == 0) {
+				result += String.valueOf(cArr[index]).toUpperCase();
+			}else {
+				result += String.valueOf(cArr[index]);
+			}
 		}
 		
 		return result;
@@ -31,9 +33,9 @@ public class TokenController {
 	
 	public int findChar(String input, char one) {
 		int result = 0;
-		StringTokenizer stn = new StringTokenizer(input);
-		while(stn.hasMoreTokens()) {
-			if(stn.nextToken().charAt(0) == one) {
+		char[] cArr = input.toCharArray();
+		for(char ch : cArr) {
+			if (ch == one) {
 				result++;
 			}
 		}
