@@ -26,7 +26,7 @@ public class B_StringMethodTest {
 		// 4. 문자열.substring(int beginIndex) : String
 		//    => 문자열의 beginIndex위치에서 부터 끝까지의 문자열을 추출해서 리턴
 		//    => 문자열.substring(int beginIndex, int endIndex) : String
-		//    => 문자열의 beginIndex의 위치헤서부터 endIndex-1 까지의 문자열을 추출해서 리턴
+		//    => 문자열의 beginIndex의 위치에서부터 endIndex-1 까지의 문자열을 추출해서 리턴
 		System.out.println(str1.substring(6));
 		System.out.println(str1.substring(0, 6));
 		
@@ -35,6 +35,26 @@ public class B_StringMethodTest {
 		String str3 = str1.replace('l', 'a');
 		System.out.println(str3);
 		
+		// 6. 문자열.trim() : String
+		//    => 문자열의 앞 뒤 공백을 제거한 문자열 리턴
+		String str4 = "                 J A V A           ";
+		System.out.println(str4.trim());
+		
+		//7. 문자열.toUpperCase() : String
+		//	  => 문자열을 모두 다 대문자로 변경후 문자열 반환(영문자)
+		//	 문자열.toLowerCase() : String
+		//	  => 문자열을 모두 다 소문자로 변경후 문자열 반환(영문자)
+		
+		System.out.println("upper : " + str1.toUpperCase());
+		System.out.println("lower : " + str1.toLowerCase());
+		
+		//8. 문자열.toCharArray() : char[]
+		//   =>문자열의 각 문자들을 char[]배열에 옮겨 담은 후 해당 배열을 리턴
+		char[] arr = str1.toCharArray();
+		System.out.println(arr[0]);
+		
+		// 9 . String.valueOf(char[] data) : String
+		System.out.println(String.valueOf(arr));
 		
 	}
 }
