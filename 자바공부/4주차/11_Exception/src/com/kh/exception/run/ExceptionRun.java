@@ -1,6 +1,7 @@
 package com.kh.exception.run;
 
 import com.kh.exception.controller.A_UncheckedException;
+import com.kh.exception.controller.B_CheckedException;
 
 public class ExceptionRun {
 
@@ -29,7 +30,10 @@ public class ExceptionRun {
 		
 		A_UncheckedException aue = new A_UncheckedException();
 //		aue.method1();
-		aue.method2();
+//		aue.method2();
+//		aue.method3();
+		B_CheckedException ce = new B_CheckedException();
+		ce.method1();
 
 	}
 
