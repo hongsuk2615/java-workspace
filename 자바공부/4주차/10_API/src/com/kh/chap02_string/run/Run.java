@@ -17,9 +17,9 @@ public class Run {
 		B_StringMethodTest bsmt = new B_StringMethodTest();
 //		bsmt.method();
 		C_StringTokenizerTest cstt = new C_StringTokenizerTest();
-//		cstt.method();
+		cstt.method();
 		D_StringBufferAndBuilder dsbab = new D_StringBufferAndBuilder();
-		dsbab.method();
+//		dsbab.method();
 	}
 
 }

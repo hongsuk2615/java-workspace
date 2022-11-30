@@ -39,7 +39,7 @@ public class TokenMenu {
 		String str = "J a v a P r o g r a m ";
 		System.out.println("토큰 처리 전 글자 : " + str);
 		System.out.println("토큰 처리 전 개수 : " + str.length());
-		str = tc.afterToker(str);
+		str = tc.afterToken(str);
 		System.out.println("토큰 처리 후 글자 : " + str);
 		System.out.println("토큰 처리 후 개수 : " + str.length());
 		System.out.println("모두 대문자로 변환 : " + str.toUpperCase());
