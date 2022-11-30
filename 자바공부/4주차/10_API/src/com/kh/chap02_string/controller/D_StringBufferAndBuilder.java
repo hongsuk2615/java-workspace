@@ -33,7 +33,7 @@ public class D_StringBufferAndBuilder {
 		//마지막위치의 문자를 없애는 메서드
 		//마지막위치 : 문자열의 길이 -1
 		//sb.deleteCharAt(인덱스); : 인덱스에있는 문자를 없애는 메서드
-		
+		sb.deleteCharAt(0);
 		sb.deleteCharAt(sb.length()-1);
 		System.out.println(sb);
 		
