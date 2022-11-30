@@ -30,7 +30,6 @@ public class D_StringBufferAndBuilder {
 		
 		System.out.println("sb의 길이는?" + sb.length());
 		System.out.println("o의 마지막 위치는?" + sb.lastIndexOf("o"));
-		
 		//마지막위치의 문자를 없애는 메서드
 		//마지막위치 : 문자열의 길이 -1
 		//sb.deleteCharAt(인덱스); : 인덱스에있는 문자를 없애는 메서드
