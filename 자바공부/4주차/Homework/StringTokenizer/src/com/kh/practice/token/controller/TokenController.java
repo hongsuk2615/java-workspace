@@ -8,7 +8,7 @@ public class TokenController {
 		super();
 	}
 	
-	public String afterToker(String str) {
+	public String afterToken(String str) {
 		String result = "";
 		StringTokenizer stn = new StringTokenizer(str, " ");
 		while(stn.hasMoreTokens()) {
