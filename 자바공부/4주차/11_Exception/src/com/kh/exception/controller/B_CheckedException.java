@@ -13,7 +13,12 @@ public class B_CheckedException {
 	 */
 	
 	public void method1() {
-		method2();
+		try {
+			method2();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void method2() throws IOException {
@@ -33,5 +38,19 @@ public class B_CheckedException {
 		
 		String str = br.readLine();
 		System.out.println("문자열의 길이 : "+str.length());
+		
+		/*
+		 *                     예외 발생 시점                       예외 처리
+		 *RuntimeException    프로그램 실행 시 => 런타임에러(컴파일에러x)  필수 아님 -> unchecked Exception(조건문 또는 예외처리구문 사용)
+		 *IOException         그 외 => 컴파일 에러                   필수 => checked Exception(반드시 예외처리로 해결)               
+		 *            
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
 	}
 }
