@@ -20,7 +20,6 @@ public class NumberMenu {
 				boolean result = nc.checkDouble(num1, num2);
 				System.out.printf("%d은(는) %d의 배수인가? ", num1, num2);
 				System.out.println(result);
-
 				System.out.println("\n또는\n");
 
 			} catch (NumRangeException e) {
