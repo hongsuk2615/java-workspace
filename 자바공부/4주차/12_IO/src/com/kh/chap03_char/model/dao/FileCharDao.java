@@ -20,7 +20,6 @@ public class FileCharDao {
 			fw.write("와! IO 재밌다! \n");
 			fw.write('A');
 			fw.write(' ');
-
 			char[] cArr = { 'a', 'p', 'p', 'l', 'e' };
 			fw.write(cArr);
 			fw.flush();
