@@ -92,6 +92,37 @@ public class ListRun {
 		list.set(0, new Music("피땀눈물","BTS"));
 		System.out.println(list);
 		
+		//4. remove(int index) : 리스트에서 해당 index위치에 있는 값을 삭제
+		
+		list.remove(1);
+		System.out.println(list);
+		
+		//5. size() : 리스트에 담겨있는 데이터의 수를 반환해주는 메서드
+		System.out.println("리스트에 담긴 데이터수 : " + list.size());
+		System.out.println("리스트의 마지막 인덱스 : " + (list.size()-1));
+		
+		//6. get(int index) : E => 리스트에 해당 index위치의 데이터를 반환해주는 메서드
+//		//제네릭 설정전
+//		Music m = (Music)list.get(0);
+//		System.out.println(((Music)list.get(0)).getTitle());
+		//제네릭 설정후
+		Music m = list.get(0);
+		System.out.println(m);
+		System.out.println(m.getTitle());
+		System.out.println(m.getArtist());
+		System.out.println("=============================");
+		
+		//0번 인덱스 ~ 마지막 인덱스 데이터 출력
+		for(int i = 0 ; i < list.size();i++) {
+			System.out.println(list.get(i));
+		}
+		
+		//for each문 : 향상된 반복문
+		//for( 값을 담아줄 변수 : 순차적으로 접근할 배열, 컬렉션 ) 
+		
+		for(Music music : list) {
+			System.out.println(music);
+		}
 	}
 
 }
