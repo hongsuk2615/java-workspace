@@ -62,7 +62,7 @@ public class FileMenu {
 			if (fc.checkName(file)) {
 				System.out.print("이미 존재하는 파일입니다. 덮어쓰시겠습니까?(y/n) :");
 				char agree = sc.nextLine().charAt(0);
-				if (agree == 'y') {
+				if (agree == 'y' || agree == 'Y') {
 					fc.fileSave(file, sb);
 					break;
 				}

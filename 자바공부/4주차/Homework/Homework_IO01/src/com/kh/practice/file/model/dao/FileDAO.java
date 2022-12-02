@@ -4,7 +4,7 @@ import java.io.*;
 
 public class FileDAO {
 	
-	public boolean checkName(String file) {
+	public boolean checkName(String file) { //단순 파일 생성 제거의 경우 File 객체를 이용하는게 나음.
 		boolean result = false;
 		try (FileInputStream fis = new FileInputStream(file)) {
 			result = true;
@@ -15,9 +15,9 @@ public class FileDAO {
 		return result;
 	}
 
-	public void fileSave(String file, StringBuilder sb) {
+	public void fileSave(String file, String sb) {
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
-			bw.write(sb.toString());
+			bw.write(sb);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -39,9 +39,9 @@ public class FileDAO {
 		return sb;
 	}
 
-	public void fileEdit(String file, StringBuilder sb) {
+	public void fileEdit(String file, String sb) {
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(file,true))) {
-			bw.write(sb.toString());
+			bw.write(sb);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
