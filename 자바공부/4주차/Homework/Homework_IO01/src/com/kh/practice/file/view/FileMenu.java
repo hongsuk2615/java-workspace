@@ -18,9 +18,9 @@ public class FileMenu {
 			System.out.println("9. 끝내기");
 
 			System.out.print("메뉴 번호 : ");
-			int menu = sc.nextInt();
-			sc.nextLine();
-
+//			int menu = sc.nextInt();
+//			sc.nextLine();
+			int menu = Integer.parseInt(sc.nextLine()); // 입력버퍼에 엔터가 있을 수 있는 문제 해결
 			switch (menu) {
 			case 1:
 				fileSave();
