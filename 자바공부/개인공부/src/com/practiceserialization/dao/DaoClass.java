@@ -43,13 +43,12 @@ public class DaoClass {
 		}
 	}
 
-	public ChildClass[] getObject(String filename, int num) { // 파일에서 객체를 가져오는 메서드
-		ChildClass[] objec = new ChildClass[num];
+	public ChildClass getObject(String filename) { // 파일에서 객체를 가져오는 메서드
+		ChildClass objec = null;
 		try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filename))) {
-			for(int i = 0 ; i < num ; i++) {
-			objec[i] = (ChildClass) ois.readObject();
-			System.out.printf("객체 %d개 불러들이기 완료! \n",(i+1));
-			}
+			
+			  objec = (ChildClass) ois.readObject();
+			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -20,8 +20,9 @@ public class Run {
 			dc.saveObject(ccArray[i], FILENAME);
 		}
 		ChildClass[] ccArray2 = new ChildClass[CHILDNUM];
-		ccArray2 = (ChildClass[]) dc.getObject(FILENAME, CHILDNUM);
+		
 		for (ChildClass child : ccArray2) {
+			child = (ChildClass) dc.getObject(FILENAME);
 			child.printdata();
 		}
 	}
