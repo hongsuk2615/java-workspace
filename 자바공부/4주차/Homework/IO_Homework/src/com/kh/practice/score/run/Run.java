@@ -8,5 +8,4 @@ public class Run {
 		ScoreMenu sm = new ScoreMenu();
 		sm.mainMenu();
 	}
-
 }

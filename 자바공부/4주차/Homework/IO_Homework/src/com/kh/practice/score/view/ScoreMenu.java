@@ -94,7 +94,6 @@ public class ScoreMenu {
 				System.out.printf("%d\t%d\t%.14f\n", count, sumAll, avgAll);
 			}
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
