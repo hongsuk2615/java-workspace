@@ -1,6 +1,7 @@
 package com.kh.chapter01_arrayList.run;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.kh.chapter01_arrayList.model.vo.Music;
 
@@ -69,6 +70,8 @@ public class ListRun {
 		 * 2. 컬렉션에 저장된 객체를 꺼내서 사용할 때 매번 형변환 하는 절차를 없애기 위해서
 		 * 
 		 */
+		
+		
 		//1. add(E e) : 해당 리스트의 끝에 전달된 e를 추가시켜주는 메서드.
 		list.add(new Music("Cookie","new jeans"));
 		list.add(new Music("hype boy","new jeans"));
@@ -79,10 +82,12 @@ public class ListRun {
 		 * 크기에 제약이 없음
 		 * 다양한 타입의 값 추가 가능
 		 */
+		System.out.println("=============add(E e)================");
 		System.out.println(list);
 		//2. add(int index, E e) : 리스트에 전달되는 index 값 위치에 전달되는 e를 추가시켜주는 메서드
 		
 		list.add(1, new Music("바다의 왕자","박명수"));
+		System.out.println("=============add(int index, E e)================");
 		System.out.println(list);
 		
 		//중간에 값을 추가시 알아서 기존의 값들을 뒤로 땡겨주는 작업이 내부적으로 진행됨.
@@ -90,14 +95,17 @@ public class ListRun {
 		//3. set(int index, E e) : 리스트에 원하는 위치에 인덱스값을 제시하면 전달하는 e값으로 변경해주는 메서드
 		
 		list.set(0, new Music("피땀눈물","BTS"));
+		System.out.println("=============set(int index, E e)================");
 		System.out.println(list);
 		
 		//4. remove(int index) : 리스트에서 해당 index위치에 있는 값을 삭제
 		
 		list.remove(1);
+		System.out.println("=============remove(int index)================");
 		System.out.println(list);
 		
 		//5. size() : 리스트에 담겨있는 데이터의 수를 반환해주는 메서드
+		System.out.println("==============size()===============");
 		System.out.println("리스트에 담긴 데이터수 : " + list.size());
 		System.out.println("리스트의 마지막 인덱스 : " + (list.size()-1));
 		
@@ -110,7 +118,7 @@ public class ListRun {
 		System.out.println(m);
 		System.out.println(m.getTitle());
 		System.out.println(m.getArtist());
-		System.out.println("=============================");
+		System.out.println("===============get(int index) : E==============");
 		
 		//0번 인덱스 ~ 마지막 인덱스 데이터 출력
 		for(int i = 0 ; i < list.size();i++) {
@@ -123,6 +131,30 @@ public class ListRun {
 		for(Music music : list) {
 			System.out.println(music);
 		}
+		System.out.println("=============sublist(int index1, int index2)================");
+		//7. sublist(int index1, int index2) : 해당 리스트로부터 index1 에서 index2까지의 데이터 값들을
+		//	                                   추출해서 새로운 List로 반환시켜주는 메서드
+		List<Music> sub = list.subList(0, 2);
+		System.out.println(sub);
+		
+		System.out.println("===============addAll(Collection c)==============");
+		
+		//8. addAll(Collection c) : 해당 리스트에 다른 컬렉션에 있는 데이터들을 통채로 추가해주는 메서드	
+		list.addAll(sub);
+		
+		System.out.println(list);
+		System.out.println("==============isEmpty()===============");
+		
+		//9.isEmpty() : 해당 리스트가 비어있는지 여부를 반환(boolean)
+		System.out.println(list.isEmpty());
+		
+		System.out.println("===============clear()==============");
+		
+		//10. clear() : 해당 리스트를 비워주는 메서드
+		list.clear();
+		System.out.println(list);
+		System.out.println(list.isEmpty());
+		
 	}
 
 }

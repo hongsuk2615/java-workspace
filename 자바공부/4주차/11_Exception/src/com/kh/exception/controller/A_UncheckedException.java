@@ -8,12 +8,13 @@ public class A_UncheckedException {
 	/*
 	 * RuntimeException -프로그램 실행시 발생되는 예외들
 	 * 
-	 * RuntimeException의 자식클래스들 -ArrayIndexOutOfBoundsException : 배열의 부적절한 인덱스로 접근할때
-	 * 발생하는 예외 -NegativeArraySizeException : 배열의 크기를 음수로 지정할 경우 발생하는 예외
-	 * -ClassCastException : 허용할 수 없는 형변환이 진행될 경우 발생하는 예외 -NullPointerException :
-	 * 레퍼런스가 아직 null임에도 불구하고 접근하려고 할때 발생하는 예외 
-	 * -ArithmeticException : 나누기 연산시 0으로 나눌때
-	 * 발생하는 예외 -......
+	 * RuntimeException의 자식클래스들 
+	 * -ArrayIndexOutOfBoundsException : 배열의 부적절한 인덱스로 접근할때 발생하는 예외 
+	 * -NegativeArraySizeException : 배열의 크기를 음수로 지정할 경우 발생하는 예외
+	 * -ClassCastException : 허용할 수 없는 형변환이 진행될 경우 발생하는 예외 
+	 * -NullPointerException : 레퍼런스가 아직 null임에도 불구하고 접근하려고 할때 발생하는 예외 
+	 * -ArithmeticException : 나누기 연산시 0으로 나눌때 발생하는 예외 
+	 * -......
 	 * 
 	 * =>이러한 RuntimeException과 관련한 예외는 충분히 예상가능한 상황이기때문에 예외자체가 발생이 안되게끔 조건문으로 해결이
 	 * 가능(따라서 굳이 예외처리를 할 필요가 없음)

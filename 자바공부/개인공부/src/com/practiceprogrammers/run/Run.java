@@ -5,6 +5,7 @@ import com.practiceprogrammers.model.vo.Lines;
 import com.practiceprogrammers.model.vo.Parallel;
 import com.practiceprogrammers.model.vo.SafeArea;
 import com.practiceprogrammers.model.vo.Solution;
+import com.practiceprogrammers.model.vo.SumOfNumSeries;
 
 public class Run {
 
@@ -24,9 +25,12 @@ public class Run {
 //		Lines l = new Lines();
 //		int[][] lines = {{0, 5}, {3, 9}, {1, 10}};
 //		l.solution(lines);
-		SafeArea sa = new SafeArea();
-		int[][] board = {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 1, 0, 0}, {0, 0, 0, 0, 0}};
-		sa.solution(board);
+//		SafeArea sa = new SafeArea();
+//		int[][] board = {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 1, 0, 0}, {0, 0, 0, 0, 0}};
+//		sa.solution(board);
+		SumOfNumSeries sons = new SumOfNumSeries();
+		sons.solution(5, 15);
+		
 		
 	}
 
