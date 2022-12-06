@@ -1,3 +1,4 @@
+
 package com.kh.chap05_assist2.model.vo;
 
 import java.io.Serializable;

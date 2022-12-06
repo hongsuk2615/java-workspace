@@ -10,6 +10,6 @@ public class Run {
 		c.number2 = 2;
 		c.printNum();
 		}
-	}
+	
 
 }
