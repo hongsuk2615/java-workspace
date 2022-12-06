@@ -12,7 +12,7 @@ public class PropertiesRun2 {
 		try {
 			//5. load(InputStream is)
 //			prop.load(new FileInputStream("test.properties"));
-			//6. loadFormXml(InputStream is)
+			//6. loadFromXml(InputStream is)
 			prop.loadFromXML(new FileInputStream("test.xml"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

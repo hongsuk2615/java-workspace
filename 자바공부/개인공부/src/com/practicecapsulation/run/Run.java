@@ -9,7 +9,7 @@ public class Run {
 		c.number = 1;
 		c.number2 = 2;
 		c.printNum();
-
+		}
 	}
 
 }
