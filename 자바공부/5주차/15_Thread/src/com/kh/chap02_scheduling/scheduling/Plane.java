@@ -11,7 +11,7 @@ public class Plane implements Runnable {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		}
+		} 
 	}
 
 }
