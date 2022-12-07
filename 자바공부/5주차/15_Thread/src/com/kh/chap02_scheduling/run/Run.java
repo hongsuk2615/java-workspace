@@ -26,13 +26,32 @@ public class Run {
 		System.out.println(tankthread.getName() + "의 우선순위 : " + tankthread.getPriority());
 		
 		//setPriority(); : 우선순위를 지정해주는 메서드
-		carthread.setPriority(Thread.MIN_PRIORITY);
 		planethread.setPriority(Thread.MAX_PRIORITY);
+		carthread.setPriority(Thread.MIN_PRIORITY);
 		
+		System.out.println("==============우선순위 변경후==============");
+		System.out.println(Thread.currentThread().getName()+"의 우선순위 : " + Thread.currentThread().getPriority());
+		System.out.println(carthread.getName() + "의 우선순위 : " + carthread.getPriority());
+		System.out.println(planethread.getName() + "의 우선순위 : " + planethread.getPriority());
+		System.out.println(tankthread.getName() + "의 우선순위 : " + tankthread.getPriority());
+		
+		carthread.setDaemon(true);
+		planethread.setDaemon(true);
+		tankthread.setDaemon(true);
 		carthread.start();
 		planethread.start();
 		tankthread.start();
-
+		
+		/*
+		 * 메인 스레드가 종료되더라도 실행 중인 스레드가 하나라도 있다면 프로세스는 종료되지 않는다.
+		 * 해결책 : start()시키기전에 우선순위, 주종관계를 설정해야함.
+		 * 주종관계 설정
+		 * main스레드가 종료시 다른 스레드도 종료시키기 위해서 반드시 setDaemon사용.
+		 * 주의점은 스레드중 한개라도 setDaemon으로 설정시 모든 스레드에 setDaemon설정을 해줘야함.
+		 */
+		
+		System.out.println("==============main 스레드 종료시점==============");
+		//시작순서는 우선순위와 다를수 있지만 종료순서는 우선순위(priority가 높은 순 대부분으로 끝나게 됨) / 항상x
 	}
 
 }
