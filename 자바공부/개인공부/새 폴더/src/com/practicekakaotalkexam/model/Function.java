@@ -8,9 +8,6 @@ public class Function {
 	private HashMap<String, Integer> variable = new HashMap();
 	private int counter = 0;
 
-	public void run() {
-
-	}
 
 	public void mov(String param, int value) {
 		variable.put(param, value);

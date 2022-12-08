@@ -30,50 +30,49 @@ public class Controller {
 		System.out.println("==============================");
 	}
 
-	public void runFunction() throws Exception { // 실제 동작메서드 
+	public void runFunction() throws Exception { // 실제 동작메서드
 		System.out.println("============동작시작===========");
 		while (true) {
-			switch (orderProcess.get(function.getCounter())[0]) {
+			int counter = function.getCounter();
+			String functionString = orderProcess.get(counter)[0]; //함수 문자열
+			String parameter1 = orderProcess.get(counter)[1]; //첫번째 매개변수
+			String parameter2 = orderProcess.get(counter)[2]; //두번째 매개변수
+			switch (functionString) {
 			case "mov":
-				function.mov(orderProcess.get(function.getCounter())[1],
-						Integer.parseInt(orderProcess.get(function.getCounter())[2]));
+				function.mov(parameter1, Integer.parseInt(parameter2));
 				break;
 			case "add":
-				if (isInteger(orderProcess.get(function.getCounter())[2])) {
-					function.add(orderProcess.get(function.getCounter())[1],
-							Integer.parseInt(orderProcess.get(function.getCounter())[2]));
+				if (isInteger(parameter2)) {
+					function.add(parameter1, Integer.parseInt(parameter2));
 				} else {
-					function.add(orderProcess.get(function.getCounter())[1],
-							orderProcess.get(function.getCounter())[2]);
+					function.add(parameter1, parameter2);
 				}
 				break;
 			case "sub":
-				if (isInteger(orderProcess.get(function.getCounter())[2])) {
-					function.sub(orderProcess.get(function.getCounter())[1],
-							Integer.parseInt(orderProcess.get(function.getCounter())[2]));
+				if (isInteger(parameter2)) {
+					function.sub(parameter1, Integer.parseInt(parameter2));
 				} else {
-					function.sub(orderProcess.get(function.getCounter())[1],
-							orderProcess.get(function.getCounter())[2]);
+					function.sub(parameter1, parameter2);
 				}
 				break;
 			case "jn0":
-				function.jn0(orderProcess.get(function.getCounter())[1],
-						Integer.parseInt(orderProcess.get(function.getCounter())[2]));
+				function.jn0(parameter1, Integer.parseInt(parameter2));
 				break;
 			case "prt":
-				function.prt(orderProcess.get(function.getCounter())[1],
-						Integer.parseInt(orderProcess.get(function.getCounter())[2]));
+				function.prt(parameter1, Integer.parseInt(parameter2));
+				orderProcess.clear();//prt 명령어 실행시 명령어리스트 초기화
 				return;
 			default:
 				System.out.println("없는 함수입력 입니다.");
 				function.clearVariable();
+				orderProcess.clear();
 				function.setCounter(0); // 초기화
 				return;
 			}
 		}
 	}
 
-	private boolean isInteger(String str) {
+	private boolean isInteger(String str) { //정수변환 가능여부 
 		try {
 			Integer.parseInt(str);
 			return true;
