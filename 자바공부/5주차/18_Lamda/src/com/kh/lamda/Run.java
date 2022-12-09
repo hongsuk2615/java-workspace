@@ -46,7 +46,7 @@ public class Run {
 		l2.test(1);
 		
 		lamda3 l3;
-		l3 = () -> "하이"; //단순리턴문일경우 중괄호 생략가능
+		l3 = () -> "하이"; //단순리턴문일경우 return키워드, 중괄호 생략가능
 		System.out.println(l3.test());
 		
 		lamda4 l4;
