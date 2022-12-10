@@ -1,5 +1,6 @@
 package com.kh.chap04;
 
+
 import java.util.ArrayList;
 import java.util.function.Predicate;
 
@@ -12,11 +13,11 @@ public class OperatorAndPredicate {
 	 * Predicate 인터페이스 특징 1. 매개변수로 넘어온 값을 "검증"할때 사용 2. 받아온 타입을 확인하고 boolean값을 반환
 	 */
 	public static void main(String[] args) {
-
+		Integer a = 1;
 		// Predicate <T> : T형을 인자로 받아서 true / false값 리턴
 		// Product 클래스를 인자로 받아 재고가 있다면 true, 없으면 false 반환
 		Predicate<Product> checkStock = product -> product.getStock() > 0;
-
+		
 		ArrayList<Product> pList = new ArrayList<Product>();
 		pList.add(new Product("갤럭시z플립4", 1350000, 51));
 		pList.add(new Product("갤럭시폴드4", 1250000, 53));

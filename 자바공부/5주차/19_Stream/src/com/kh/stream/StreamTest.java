@@ -11,7 +11,10 @@ public class StreamTest {
 	 * 
 	 * 컬렉션이 요소를 할당하고 관리하는데 목적이 있다면 스트림은 요소를 검색, 필터링하거나 값을 처리하는데 목적이 있음.
 	 * 
-	 * 스트림의 특징 1)메서드의 매개변수에 람다식 사용가능 2)식이 간결해짐 3)컬렉션 및 배열을 통한 연산결과를 얻어오기 용이함.
+	 * 스트림의 특징 
+	 * 1)메서드의 매개변수에 람다식 사용가능 
+	 * 2)식이 간결해짐 
+	 * 3)컬렉션 및 배열을 통한 연산결과를 얻어오기 용이함.
 	 * 
 	 */
 
@@ -22,7 +25,7 @@ public class StreamTest {
 		String[] foods = {"삼겹살","갈비살","쌈장","파"};
 		
 		//1)steam()메서드를 통한 스트림 객체 선언
-		Stream<String> strStream = Arrays.stream(foods);
+		Stream<String> strStream = Arrays.stream(foods); 
 		//2)foreach반복문을 통해 배열의 요소에 하나씩 접근
 		strStream.forEach((str)->System.out.println(str)); //Consumer interface
 		//3)int형 배열을 선언하여 연산테스트
