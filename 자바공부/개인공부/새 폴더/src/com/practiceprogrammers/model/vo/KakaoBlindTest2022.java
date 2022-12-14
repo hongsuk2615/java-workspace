@@ -1,26 +1,32 @@
 package com.practiceprogrammers.model.vo;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map.Entry;
+import java.util.Set;
 
 public class KakaoBlindTest2022 {
 	public int[] solution(String[] id_list, String[] report, int k) {
 
-		HashMap<String, HashSet> reportMap = new HashMap<String, HashSet>();
-		HashSet<String> reportSet = new HashSet<String>();
+		HashMap<String, HashSet<String>> reportMap = new HashMap<String, HashSet<String>>();
 		/*
-		 * [{key :"id" , value : ½Å°íÇÑ ¾ÆÀÌµğÁıÇÕ}]
+		 * reportMap : [{key :"id" , value : ì‹ ê³ í•œ ì•„ì´ë””ì§‘í•©}]
 		 */
-		for (String reportStr : report) { 
-			reportSet.add(reportStr.split(" ")[1]);
-			reportMap.put(reportStr.split(" ")[0], reportSet);
+		for (String reportStr : report) {
+			reportMap.put(reportStr.split(" ")[0], new HashSet<String>() { //ìƒì„±ê³¼ ë™ì‹œì— ì´ˆê¸°í™”
+				{
+					add(reportStr.split(" ")[1]);
+				}
+			});
 		}
+		HashMap<String, Integer> reportedNum = new HashMap<String, Integer>();
+
 		/*
-		 * ½Å°í¹ŞÀº È½¼ö Á¤¸® 
+		 * reportedNum : [ {key : "id", value : ì‹ ê³ ë‹¹í•œ íšŸìˆ˜}]
 		 */
-		
-		
-		int[] answer = {};
-		return answer;
+
 	}
-}
+
+	int[] answer = {};return answer;
+}}
