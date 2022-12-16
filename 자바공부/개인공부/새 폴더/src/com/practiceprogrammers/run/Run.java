@@ -2,6 +2,7 @@ package com.practiceprogrammers.run;
 
 import com.practiceprogrammers.model.vo.Dot;
 import com.practiceprogrammers.model.vo.Lines;
+import com.practiceprogrammers.model.vo.NumStringAndVoca;
 import com.practiceprogrammers.model.vo.Parallel;
 import com.practiceprogrammers.model.vo.SafeArea;
 import com.practiceprogrammers.model.vo.Solution;
@@ -28,8 +29,10 @@ public class Run {
 //		SafeArea sa = new SafeArea();
 //		int[][] board = {{0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 1, 0, 0}, {0, 0, 0, 0, 0}};
 //		sa.solution(board);
-		SumOfNumSeries sons = new SumOfNumSeries();
-		sons.solution(5, 15);
+//		SumOfNumSeries sons = new SumOfNumSeries();
+//		sons.solution(5, 15);
+		NumStringAndVoca nsav = new NumStringAndVoca();
+		nsav.solution("one4seveneight");
 		
 		
 	}

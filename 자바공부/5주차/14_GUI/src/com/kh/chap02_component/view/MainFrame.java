@@ -37,7 +37,6 @@ public class MainFrame extends javax.swing.JFrame {
 		
 		this.add(panel,"North");
 		this.add(button,"South");
-		
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}

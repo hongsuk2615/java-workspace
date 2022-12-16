@@ -14,7 +14,7 @@ public class KakaoBlindTest2022 {
 		 * reportMap : [{key :"id" , value : 신고한 아이디집합}]
 		 */
 		for (String reportStr : report) {
-			reportMap.put(reportStr.split(" ")[0], new HashSet<String>() { //생성과 동시에 초기화
+			reportMap.put(reportStr.split(" ")[0], new HashSet<String>() { // 생성과 동시에 초기화
 				{
 					add(reportStr.split(" ")[1]);
 				}
@@ -26,7 +26,7 @@ public class KakaoBlindTest2022 {
 		 * reportedNum : [ {key : "id", value : 신고당한 횟수}]
 		 */
 
+		// int[] answer = {}return answer;
+		return null;
 	}
-
-	int[] answer = {};return answer;
-}}
+}
