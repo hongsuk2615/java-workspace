@@ -31,8 +31,11 @@ public class Run {
 //		sa.solution(board);
 //		SumOfNumSeries sons = new SumOfNumSeries();
 //		sons.solution(5, 15);
-		NumStringAndVoca nsav = new NumStringAndVoca();
-		nsav.solution("one4seveneight");
+//		NumStringAndVoca nsav = new NumStringAndVoca();
+//		nsav.solution("one4seveneight");
+		String str = "abcd";
+		
+		System.out.println(str.substring(0, 1));
 		
 		
 	}
