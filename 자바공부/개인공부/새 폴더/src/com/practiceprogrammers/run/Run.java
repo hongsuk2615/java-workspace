@@ -7,6 +7,7 @@ import com.practiceprogrammers.model.vo.Parallel;
 import com.practiceprogrammers.model.vo.SafeArea;
 import com.practiceprogrammers.model.vo.Solution;
 import com.practiceprogrammers.model.vo.SumOfNumSeries;
+import com.practiceprogrammers.model.vo.문자열밀기;
 
 public class Run {
 
@@ -33,9 +34,7 @@ public class Run {
 //		sons.solution(5, 15);
 //		NumStringAndVoca nsav = new NumStringAndVoca();
 //		nsav.solution("one4seveneight");
-		String str = "abcd";
-		
-		System.out.println(str.substring(0, 1));
+		new 문자열밀기().solution("hello","llohe");
 		
 		
 	}
