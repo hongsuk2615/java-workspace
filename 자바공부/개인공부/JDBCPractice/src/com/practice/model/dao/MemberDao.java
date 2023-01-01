@@ -1,10 +1,19 @@
 package com.practice.model.dao;
 
+import java.sql.Connection;
+import java.util.ArrayList;
+
+
+
+
+
 public class MemberDao {
 	
-	
-	private final String JDBC_DRIVER = "oracle.jdbc.driver.OracleDriver";
-	private final String URL = "jdbc:oracle:thin:@localhost:1521:orcl";
-	private final String SERVER_ID = "JDBC";
-	private final String SERVER_PWD = "JDBC";
+		public int insertMember(Connection conn, Member m) {
+			
+		}
+		
+		public ArrayList<Member> selectAll(Connection conn){
+			
+		}
 }
